@@ -1,0 +1,55 @@
+<div class="container">
+  <b style="font-size: 50px; color: royalblue;">Order Details</b>
+<hr>
+<div class="col-md-12">
+  <div class="row">
+
+    <div *ngFor="let item of product">
+      <div class="thumbnail">
+  <a><img src="{{'http://localhost:3000/images/'+item.img }}" alt="..." style="height: 300px; width: 300px;" (click)="ondes(item)"></a>
+        <hr>
+      <div class="caption">
+        <h2>Select Qty</h2>
+        <select class="form-control"  [(ngModel)]="qty1">
+          <option *ngFor="let item of noarr" >{{item}}</option>
+        </select>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<div  class="container">
+  <div class="form-group">
+   <h4>Id:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="c_id">
+  </div>
+
+  <div class="form-group">
+      <h4>Name:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="c_name">
+  </div>
+  <div class="form-group">
+    <h4>P_name:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="p_name">
+</div>
+<div class="form-group">
+  <h4>Price:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="price">
+</div>
+<div class="form-group">
+  <h4>Order Status:</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="status">
+</div>
+<div class="form-group">
+  <h4>Address</h4> <input class="form-control" [disabled]="true" type="text" [(ngModel)]="address">
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+          <button class="btn btn-lg btn-primary form-control" (click)="Placeorder()" >Order Now</button>
+  </div>
+  <div class="col-md-6">
+    <button class="btn btn-lg btn-primary form-control" (click)="can()" >Cancel</button>
+</div>
+
+  </div>
+
+
+</div>
+</div>
+

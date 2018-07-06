@@ -1,0 +1,21 @@
+    <div class="col-md-12">
+      <div class="row">
+
+        <div *ngFor="let item of arr" class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+      <a><img src="{{'http://localhost:3000/images/'+item.img }}" alt="..." style="height: 300px; width: 300px;" (click)="ondes(item)"></a>
+            <hr>
+          <div class="caption">
+              <h3>Name:{{item.p_name}}</h3>
+              <h3>Price:{{item.price}}</h3>
+              <h3>Status:{{item.o_status}}</h3>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+

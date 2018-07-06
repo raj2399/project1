@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+
+
+        <div *ngFor="let item of arr">
+          <div class="thumbnail">
+          <a>   <img src="{{'http://localhost:3000/images/'+item.img }}" alt="..." style="height: 200px; width: 200px;" (click)="ondes(item)"></a>
+
+            <div class="caption">
+
+              <h3>{{item.p_name}}</h3>
+              <h2>{{item.p_des}}</h2>
+              <br>
+              <h2>{{item.price}}</h2>
+              <h2>{{item.color}}</h2>
+              <h2>{{this.q}}</h2>
+              <div class="row">
+                <div class="col-md-6">
+                        <button class="btn btn-lg btn-primary form-control" (click)="onAdd(item)" >Buy</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-lg btn-danger form-control" (click)="oncan()">CANCEL</button>
+          </div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<hr>
+<h3>Simillar Product</h3>
+<hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+
+          <div *ngFor="let item of arr1" class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a><img src="{{'http://localhost:3000/images/'+item.img }}" alt="..." style="height: 200px; width: 200px;" (click)="ondes(item)"></a>
+
+              <div class="caption">
+                <h3>{{item.p_name}}</h3>
+                <h3>{{item.price}}</h3>
+                <h3>{{item.color}}</h3>
+                <p>
+                   <button (click)="ondes(item.p_id)">details</button>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <nav class="navbar navbar-inverse">
+
+      </nav>
+    </div>
+
+
